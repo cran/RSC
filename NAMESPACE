@@ -1,0 +1,25 @@
+## import all functions from the following pkgs
+import("stats", "graphics", "Matrix")
+
+## selective imports from pkgs 
+importFrom("methods", "as")
+importFrom("foreach", "foreach", "%dopar%")
+importFrom("parallel","detectCores")
+importFrom("doParallel", "registerDoParallel", "stopImplicitCluster")
+importFrom("utils", "citHeader", "citEntry")
+
+## export objects in /src 
+useDynLib(RSC, .registration = TRUE, .fixes = "F_")
+
+## export objects in /R
+export(rmad)
+export(rsc_cv)
+export(rsc)
+
+
+## export S3 methods
+S3method(plot,  rsc_cv)
+S3method(print, rsc_cv)
+
+## ## exports every object that doesn't start with a dot
+## exportPattern("^[^\\.]")

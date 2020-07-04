@@ -1,0 +1,9 @@
+all: $(SHLIB)
+	$(MAKE) $(SHLIB)
+	rm -f *.o *.mod
+
+cormaddp.o: selectiongeneral.o
+	$(FC) -c -fPIC cormaddp.f90 -o cormaddp.o
+
+selectiongeneral.o: selectiongeneral.f95
+	$(FC) -c -fPIC selectiongeneral.f95 -o selectiongeneral.o
