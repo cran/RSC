@@ -1,0 +1,12 @@
+## 24/07/2020 at 09:44:39 (CEST)
+* v1.2 uploaded
+* fixed compiler issue on Solaris
+
+
+## 17/07/2020 at 09:01:44 (CEST)
+* v1.1  uploaded
+* fixed an issue related to the Fortran compiler on Solaris
+
+
+## 02/07/2020 at 09:00:01 (CEST)
+* v1.0 uploaded 

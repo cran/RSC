@@ -14,7 +14,7 @@ citEntry(entry="Manual",
          textVersion =
          paste("Coraggio, L., Coretto, P., Serra, A. and Tagliaferri, R. (", year,").
                 RSC: robust and sparse correlation matrix estimation. ",
-                note, "url: https://CRAN.R-project.org/package=rsc",
+                note, "url: https://CRAN.R-project.org/package=RSC",
                 sep='')
         )
 

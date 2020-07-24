@@ -72,7 +72,7 @@ colnames(dat) <- paste0("Var", 1:p)
 ## perform 10-fold cross-validation repeated R=10 times
 ## note: for multi-core machines experiment with 'ncores'
 set.seed(2)
-a <- rsc_cv(x = dat, R = 10, K = 10)
+a <- rsc_cv(x = dat, R = 10, K = 10, ncores = 1)
 a
 
 ## plot the cross-validation estimates

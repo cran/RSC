@@ -1,5 +1,6 @@
-80c587bf8be31b19549b965aa44f1d50 *DESCRIPTION
+7a9c09c1b58001a6ef17502cccb6b9ee *DESCRIPTION
 1f64d30a870f2eae4855e83010aaaa4e *NAMESPACE
+1eae13396706a60fc95f5ff4b751765b *NEWS
 0b87a473118069181446fb007472c042 *R/check_inputs.R
 1df1ecba75175b1665069fc88419cf02 *R/cv_loss.R
 1ada6bc39f15ea58f34a5d46173141fa *R/plot_print_methods.R
@@ -7,12 +8,10 @@
 f26fdd51a2378e500e6ed2eaeda8721a *R/rsc.R
 556a9a10b85bfad178103f3cc5fdc0ff *R/rsc_cv.R
 607039efb30fc06f123290e3dcbce1d4 *R/zzz.R
-ee184b1708ad4ef4735070065fe6737c *inst/CITATION
-fffcd92fdbda643ea59f12298cc04287 *man/plot.cv_rsc.Rd
+02a06053793e54ce413a378a05ccc3ce *inst/CITATION
+1e6af804927098cfa6c235278682578c *man/plot.cv_rsc.Rd
 57435eb3ed73e1af9435073eeaf57928 *man/rmad.Rd
-18e1373418dce90153d0727d19f5fa9e *man/rsc.Rd
-2ab80b72b7090b2514c9cf4b3fbe006d *man/rsc_cv.Rd
-24cec7b34e7c1931f74d1f25cad05a83 *src/Makevars
-f135feaeda1c3e803c74729a94fcc416 *src/cormaddp.f90
+8cc5c9373c7aa8835e9818d0de274ece *man/rsc.Rd
+63d3e58e9bdc0da9969feb6ce69d005f *man/rsc_cv.Rd
+f45a14eed865277afe99ebcb1bed66f8 *src/cormaddp.f90
 9ded1c66a2fd469e79d7d1d25d0bd604 *src/init.c
-62f9244cb578a6720b664233da503e32 *src/selectiongeneral.f95
