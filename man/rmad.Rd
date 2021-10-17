@@ -12,7 +12,7 @@
 
 
 \usage{
-  rmad(x , y = NULL, na.rm = FALSE , even.correction = FALSE)   
+  rmad(x , y = NULL, na.rm = FALSE , even.correction = FALSE, num.threads = "half-max")   
 }
 
 
@@ -38,6 +38,9 @@
     A logical value, if \code{TRUE} a correction
     for the calculation of the medians is applied to reduce the bias
     when the number of samples even (see \emph{Details}).
+  }
+  \item{num.threads}{
+     An integer value or the string \code{"half-max"} (default), specifying the number of threads for parallel execution (see \emph{Details}).
   }
 }
 
@@ -74,6 +77,12 @@
    package. The latter is  specifically designed for dense real symmetric
    matrices. A sparse correlation matrix can be obtained applying
    thresholding using the \code{\link{rsc_cv}} and \code{\link{rsc}}.
+
+   \code{rmad} function supports parallel execution.
+   This is provided via \emph{openmp} (http://www.openmp.org), which must be available; otherwise, falls back to single-core execution.
+   If \code{num.threads > 0}, function is executed using \code{min(num.threads, max.threads)} threads, where \code{max.threads} is the maximum number of available threads. That is, if positive use the specified number of threads (up to the maximum available).
+   If \code{num.threads < 0}, function is executed using \code{max(max.threads - num.threads, 1)} threads, i.e. when negative \code{num.threads} indicates the number of threads not to use.
+   If \code{num.threads == 0} or \code{num.threads == "half-max"}, function is executed using half of the available threads (\code{max(max.threads/2, 1)}). This is the default.
 }
 
 

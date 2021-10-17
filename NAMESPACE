@@ -9,7 +9,7 @@ importFrom("doParallel", "registerDoParallel", "stopImplicitCluster")
 importFrom("utils", "citHeader", "citEntry")
 
 ## export objects in /src 
-useDynLib(RSC, .registration = TRUE, .fixes = "F_")
+useDynLib(RSC, .registration = TRUE, .fixes = "C_")
 
 ## export objects in /R
 export(rmad)
