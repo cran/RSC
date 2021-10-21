@@ -18,6 +18,8 @@ rmad <- function(x, y = NULL, na.rm = FALSE, even.correction = FALSE, num.thread
   ## set number of threads
   if (num.threads == "half-max") {
     num.threads <- 0L
+  } else if (num.threads == 0) {
+    num.threads <- 1L
   } else {
     storage.mode(num.threads) <- "integer"
   }

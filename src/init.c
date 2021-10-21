@@ -1,15 +1,12 @@
 #include "RSCdefines.h"
-#include <R.h>
-#include <R_ext/RS.h>
-#include <R_ext/Rdynload.h>
-#include <Rdefines.h>
-#include <Rinternals.h>
-#include <Rmath.h>
 #include <stdio.h>
 #include <stdlib.h>
 #ifdef _OPENMP
 #include <omp.h>
 #endif
+#include <R.h>
+#include <R_ext/Rdynload.h>
+#include <Rinternals.h>
 
 // Wrapper for C cormad (with pointers)
 SEXP cormad_C(SEXP R_matrix, SEXP len_rows, SEXP len_cols, SEXP R_evencorrect,

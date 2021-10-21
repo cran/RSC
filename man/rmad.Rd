@@ -55,8 +55,8 @@
    
    The software is optimized for large dimensional data sets, the median
    is approximated as the central observation obtained based on the
-   \emph{introselect} sorting algorithm of Musser (1997) implemented in
-   Fortran 95 language. For small samples this may be a crude
+   \emph{find} algorithm of Hoare (1961) (also known as \emph{quickselect})
+   implemented in C language. For small samples this may be a crude
    approximation, however, it makes the computational cost feasible for
    high-dimensional data sets. With the option \code{even.correction
    = TRUE} a correction is applied to reduce the bias for data sets with
@@ -79,10 +79,13 @@
    thresholding using the \code{\link{rsc_cv}} and \code{\link{rsc}}.
 
    \code{rmad} function supports parallel execution.
-   This is provided via \emph{openmp} (http://www.openmp.org), which must be available; otherwise, falls back to single-core execution.
-   If \code{num.threads > 0}, function is executed using \code{min(num.threads, max.threads)} threads, where \code{max.threads} is the maximum number of available threads. That is, if positive use the specified number of threads (up to the maximum available).
-   If \code{num.threads < 0}, function is executed using \code{max(max.threads - num.threads, 1)} threads, i.e. when negative \code{num.threads} indicates the number of threads not to use.
-   If \code{num.threads == 0} or \code{num.threads == "half-max"}, function is executed using half of the available threads (\code{max(max.threads/2, 1)}). This is the default.
+   This is provided via \emph{openmp} (http://www.openmp.org), which must be already available on the system at installation time;
+   otherwise, falls back to single-core execution.
+   For later installation of openmp, the RSC package needs to be re-installed (re-compiled) to provide multi-threads execution. 
+   If \code{num.threads > 0}, function is executed using \code{min(num.threads, max.threads)} threads, where \code{max.threads} is the maximum number of available threads. That is, if positive the specified number of threads (up to the maximum available) are used.
+   If \code{num.threads < 0}, function is executed using \code{max(max.threads - num.threads, 1)} threads, i.e. when negative \code{num.threads} indicates the number of threads not to use (at least one thread is used).
+   If \code{num.threads == 0}, a single thread is used (equivalent to \code{num.threads = 1}).
+   If \code{num.threads == "half-max"}, function is executed using half of the available threads (\code{max(max.threads/2, 1)}). This is the default.
 }
 
 
@@ -101,6 +104,9 @@
 
 
 \section{References}{
+  Hoare, C. A. (1961). Algorithm 65: find.
+  \emph{Communications of the ACM}, 4(7), 321-322.
+
   Musser, D. R. (1997). Introspective sorting and selection algorithms.
   \emph{Software: Practice and Experience}, 27(8), 983-993.
   

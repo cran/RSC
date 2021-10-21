@@ -1,3 +1,9 @@
+## 21/10/2021 at 11:37:00 (CEST)
+* v2.0.1:
+   + fixed include C system headers before R.h
+   + modified behaviour of num.threads (rmad)
+   + updated references for quickselect
+
 ## 14/10/2021 at 11:51:10 (CEST)
 * New version: v2.0.
    + Implemented the low-level routines in C.
