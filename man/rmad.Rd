@@ -91,14 +91,11 @@
 
 
 \value{
-  \item{If \code{x} is a matrix or a data.frame}{
-    Returns a correlation matrix of class \code{"dspMatrix"} (S4 class object)
+  If \code{x} is a matrix or a data.frame, returns a correlation matrix of class \code{"dspMatrix"} (S4 class object)
     as defined in the \code{\link{Matrix}} package.
-  }
-  \item{If \code{x} and \code{y} are numerical vectors}{
-    Returns a numerical value, that is the RMAD correlation coefficient
-    between \code{x} and \code{y}.    
-  }
+  
+  If \code{x} and \code{y} are numerical vectors, returns a numerical value, that is the RMAD correlation coefficient
+    between \code{x} and \code{y}.
 }
 
 

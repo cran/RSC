@@ -19,8 +19,8 @@ NeedsCompilation: yes
 Imports: stats, graphics, Matrix, methods, parallel, foreach,
         doParallel, utils
 License: GPL (>= 2)
-Version: 2.0.1
-Date: 2021-10-21
-Packaged: 2021-10-21 09:41:44 UTC; luco
+Version: 2.0.2
+Date: 2022-06-20
+Packaged: 2022-06-20 16:38:10 UTC; luco00
 Repository: CRAN
-Date/Publication: 2021-10-21 13:10:10 UTC
+Date/Publication: 2022-06-20 17:10:02 UTC

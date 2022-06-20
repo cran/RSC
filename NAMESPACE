@@ -3,6 +3,7 @@ import("stats", "graphics", "Matrix")
 
 ## selective imports from pkgs 
 importFrom("methods", "as")
+importFrom("methods", "is")
 importFrom("foreach", "foreach", "%dopar%")
 importFrom("parallel","detectCores")
 importFrom("doParallel", "registerDoParallel", "stopImplicitCluster")

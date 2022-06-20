@@ -4,7 +4,7 @@ rsc <- function(cv, threshold = "minimum"){
     ## cv         = u   ## a class cv_rsc or any other correlation matrix
     ## threshold  = "minimum" ## "minimum", "minimum1se" or numeric in (0,1)
 
-    if(class(cv) == "rsc_cv"){
+    if(is(cv, "rsc_cv")){
 
         ## check threshold
         if(is.numeric(threshold)){
