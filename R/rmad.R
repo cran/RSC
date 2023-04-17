@@ -37,7 +37,8 @@ rmad <- function(x, y = NULL, na.rm = FALSE, even.correction = FALSE, num.thread
     R <- Matrix(1, nrow = p, ncol = p, sparse = FALSE)
     R[lower.tri(R, diag = FALSE)] <- u
     R <- forceSymmetric(R, uplo = "L")
-    R <- as(R, "dspMatrix")
+    R <- as(R, "packedMatrix")
+
 
     ## attach dimnames if needed
     if (!is.null(colnames_original)) {
